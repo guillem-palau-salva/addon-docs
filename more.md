@@ -1,5 +1,5 @@
-Qt
-==
+# Qt
+
 
 As mentioned in the overview, the Qt documentation is invaluable for
 learning how to display different GUI widgets.
@@ -26,8 +26,7 @@ This is often not required when you create a Qt object and give it an
 existing object as the parent, as the parent will keep a reference to
 the object.
 
-Standard Modules
-================
+## Standard Modules
 
 Anki ships with only the standard modules necessary to run the program -
 a full copy of Python is not included. For that reason, if you need to
@@ -40,8 +39,7 @@ would need to compile them for each of the operating systems Anki
 supports. If you’re doing something sophisticated, it would be easier to
 get your users to install a standalone copy of Python instead.
 
-Configuration
-=============
+## Configuration
 
 If you include a config.json file with a JSON dictionary in it, Anki
 will allow users to edit it from the add-on manager.
@@ -89,8 +87,7 @@ mw.addonManager.setConfigAction(__name__, myOptionsFunc)
 Avoid key names starting with an underscore - they are reserved for
 future use by Anki.
 
-User Files
-==========
+## User Files
 
 When your add-on needs configuration data other than simple keys and
 values, it can use a special folder called user\_files in the root of
@@ -104,8 +101,7 @@ README.txt or similar file inside it before zipping up your add-on.
 When Anki upgrades an add-on, it will ignore any files in the .zip that
 already exist in the user\_files folder.
 
-Javascript
-=====================================
+## Javascript
 
 Anki provides a hook to modify the question and answer HTML before it is
 displayed in the review screen, preview dialog, and card layout screen.
@@ -161,8 +157,7 @@ addHook('prepareQA', prepare)
 
 The hooks are reset each time the question or answer is shown.
 
-Debugging
-=========
+## Debugging
 
 If your code throws an exception, it will be caught by Anki’s standard
 exception handler (which catches anything written to stderr). If you
@@ -238,8 +233,7 @@ debugger in the terminal:
 Alternatively you can export DEBUG=1 in your shell and it will kick into
 the debugger on an uncaught exception.
 
-Learning More
-=============
+## Learning More
 
 Anki’s source code is available at <http://github.com/dae/>. The
 colllection object is defined in anki’s collection.py. Other useful
